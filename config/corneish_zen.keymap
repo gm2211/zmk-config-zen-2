@@ -13,6 +13,7 @@
 #define LOWER 1
 #define RAISE 2
 #define SYMBOLS 3
+#define CTRL_LAYER 4
 
 / {
         keymap {
@@ -58,7 +59,7 @@
                         bindings = <
    &kp  TAB  &kp LG(Q) &kp LG(W) &kp HASH  &kp LG(R) &kp LG(T)  &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
    &trans    &trans    &trans    &trans    &kp LG(F) &trans     &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp PIPE
-   &kp LCTRL &trans    &kp LG(X) &kp LG(C) &kp LG(V) &trans     &kp UNDER &kp RET   &kp LBRC        &kp RBRC &kp PIPE &kp GRAVE
+   &mo CTRL_LAYER &trans    &kp LG(X) &kp LG(C) &kp LG(V) &trans     &kp UNDER &kp RET   &kp LBRC        &kp RBRC &kp PIPE &kp GRAVE
                     	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
@@ -77,5 +78,20 @@
 				    &kp LGUI     &trans       &kp SPACE                                       &kp RET  &kp UNDER  &kp RALT
 					>;
 				};
+
+                ctrl_layer {
+                        label = "CTRL_LAYER";
+// -----------------------------------------------------------------------------------------
+// |      |         |         |        |  CTRL_R |         |   |     |      |     |     |     |      |
+// |      |         |         |        |         |         |   |     |      |     |     |     |      |
+// |    L |         |         | CTRL_C |  GUI_V  |         |   |     |      |     |     |     |      |
+//                            |   GUI  |         | SPC     |   |     |      |     |
+                        bindings = <
+   &trans    &trans    &trans    &trans    &kp LC(R) &trans     &trans &trans &trans &trans &trans &trans
+   &trans    &trans    &trans    &trans    &trans    &trans     &trans &trans &trans &trans &trans &trans
+   &kp LCTRL &trans    &trans    &kp LC(C) &kp LC(V) &trans     &trans &trans &trans &trans &trans &trans
+                    	     &trans &trans   &trans   &trans   &trans    &trans
+                        >;
+                };
 	};
 };
