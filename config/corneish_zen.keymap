@@ -52,14 +52,14 @@
                 raise_layer {
                         label = "RAISE";
 // -----------------------------------------------------------------------------------------
-// |  GUI_TAB |  GUI_Q      |  GUI_W  |  #    |  ALT_ENT |  GUI_T  |   |  ^  |  &   |  *  |  (  |  )  | BKSP |
-// |          |  GUI_SHFT_A |         |       |  GUI_F   |         |   |  -  |  =   |  [  |  ]  |  \  | "|"  |
-// | CTRL     |  GUI_SHFT_4 |  GUI_X  | GUI_C |  GUI_V   |         |   |  _  |  ENT |  {  |  }  | "|" |  `   |
+// |  GUI_TAB |  GUI_Q           |  GUI_W  |  #    |  ALT_ENT |  GUI_T  |   |  ^  |  &   |  *  |  (  |  )  | BKSP |
+// |          |  GUI_SHFT_A      |         |       |  GUI_F   |         |   |  -  |  =   |  [  |  ]  |  \  | "|"  |
+// | CTRL     |  GUI_CTRL_SHFT_4 |  GUI_X  | GUI_C |  GUI_V   |         |   |  _  |  ENT |  {  |  }  | "|" |  `   |
 //                            | GUI   |         | SPC     |   | ENT |      | ALT |
                         bindings = <
    &kp  LG(TAB)   &kp LG(Q)     &kp LG(W) &kp HASH  &kp LA(RET) &kp LG(T)  &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
    &trans         &LG(LSHFT(A)) &trans    &trans    &kp LG(F) &trans     &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp PIPE
-   &mo CTRL_LAYER &LG(LSHFT(4)) &kp LG(X) &kp LG(C) &kp LG(V) &trans     &kp UNDER &kp RET   &kp LBRC        &kp RBRC &kp PIPE &kp GRAVE
+   &mo CTRL_LAYER &LG(LC(LSHFT(4))) &kp LG(X) &kp LG(C) &kp LG(V) &trans     &kp UNDER &kp RET   &kp LBRC        &kp RBRC &kp PIPE &kp GRAVE
                     	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
