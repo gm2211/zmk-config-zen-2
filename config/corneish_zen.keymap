@@ -36,15 +36,15 @@
                 lower_layer {
                         label = "LOWER";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  | ENT |  8  | DEL |  DEL  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |  BKSP |      |
-// | SHFT |     |     |     |     |     |   | =   | ESC |     |     |       |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// |  TAB |  1  |  2  |  3  |  4  |     5     |   |  6  | ENT |  8  | DEL |  DEL  | BKSP |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 |    BT5    |   | LFT | DWN |  UP | RGT |  BKSP |      |
+// | SHFT |     |     |     |     |           |   | =   | ESC |     |     |       |      |
+//                    | GUI | ALT | ALT + SPC |   | ENT |     | ALT |
                         bindings = <
    &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6    &kp RET  &kp N8 &kp DEL   &kp DEL  &kp BSPC
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT  &kp DOWN &kp UP &kp RIGHT &kp BSPC &trans
    &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &kp EQUAL &kp ESC  &trans &trans    &trans   &trans
-                          	        &kp LGUI     &trans       &kp SPACE      &kp RET   &trans   &kp RALT
+                          	        &kp LGUI     &kp RALT      &kp LA(SPACE)      &kp RET   &trans   &kp RALT
                         >;
                 };
 
@@ -52,12 +52,12 @@
                         label = "RAISE";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  GUI_Q  |  GUI_W  |  #    |  GUI_R  |  GUI_T  |   |  ^  |  &   |  *  |  (  |  )  | BKSP |
-// |      |         |         |       |         |         |   |  -  |  =   |  [  |  ]  |  \  | "|"  |
+// |      |         |         |       |  GUI_F  |         |   |  -  |  =   |  [  |  ]  |  \  | "|"  |
 // | CTRL |         |  GUI_X  | GUI_C |  GUI_V  |         |   |  _  |  ENT |  {  |  }  | "|" |  `   |
 //                            | GUI   |         | SPC     |   | ENT |      | ALT |
                         bindings = <
    &kp  TAB  &kp LG(Q) &kp LG(W) &kp HASH  &kp LG(R) &kp LG(T)  &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &trans    &trans    &trans    &trans    &trans    &trans     &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp PIPE
+   &trans    &trans    &trans    &trans    &kp LG(F) &trans     &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp PIPE
    &kp LCTRL &trans    &kp LG(X) &kp LG(C) &kp LG(V) &trans     &kp UNDER &kp RET   &kp LBRC        &kp RBRC &kp PIPE &kp GRAVE
                     	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
