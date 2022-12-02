@@ -14,6 +14,7 @@
 #define RAISE 2
 #define SYMBOLS 3
 #define CTRL_LAYER 4
+#define CTRL_SHFT_LAYER 5
 
 / {
         keymap {
@@ -82,14 +83,29 @@
                 ctrl_layer {
                         label = "CTRL_LAYER";
 // -----------------------------------------------------------------------------------------
-// |      | MUTE   | VOL_DOWN | VOL_UP |  CTRL_R |  CMD_SHFT_T |          |     |      |     |     | GUI_ALT_P |      |
-// |      | CTRL_A |          |        |         |  CMD_SHFT_G |          |     |      |     |     |           |      |
-// | CTRL |        |          | CTRL_C |  GUI_V  |             |          |     |      |     |     |           |      |
-//                   |     |      |      |               |     |      |     |
+// |                 | MUTE   | VOL_DOWN | VOL_UP |  CTRL_R |  CMD_SHFT_T |          |     |      |     |     | GUI_ALT_P |      |
+// | CTRL_SHFT_LAYER | CTRL_A |          |        |         |  CMD_SHFT_G |          |     |      |     |     |           |      |
+// | CTRL            |        |          | CTRL_C |  GUI_V  |             |          |     |      |     |     |           |      |
+//                      |     |      |      |               |     |      |     |
                         bindings = <
-   &trans    &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp LC(R) &kp LG(LS(T))          &trans          &trans &trans &trans &LG(LA(P)) &trans
-   &trans    &LC(A)      &trans        &trans        &trans    &trans                 &kp LG(LS(G))   &trans &trans &trans &trans     &trans
-   &kp LCTRL &trans      &trans        &kp LC(C)     &kp LC(V) &trans                 &trans          &trans &trans &trans &trans     &trans
+   &trans                &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp LC(R) &kp LG(LS(T))          &trans          &trans &trans &trans &LG(LA(P)) &trans
+   &mo CTRL_SHFT_LAYER   &LC(A)      &trans        &trans        &trans    &trans                 &kp LG(LS(G))   &trans &trans &trans &trans     &trans
+   &kp LCTRL             &trans      &trans        &kp LC(C)     &kp LC(V) &trans                 &trans          &trans &trans &trans &trans     &trans
+                    	     &trans &trans   &trans               &trans   &trans    &trans
+                        >;
+                };
+
+                ctrl_shft_layer {
+                        label = "CTRL_SHFT_LAYER";
+// -----------------------------------------------------------------------------------------
+// |                 | MUTE   | VOL_DOWN | VOL_UP |  CTRL_SHFT_R |  CMD_SHFT_T |          |     |      |     |     | GUI_ALT_P |      |
+// | CTRL_SHFT_LAYER | CTRL_A |          |        |              |  CMD_SHFT_G |          |     |      |     |     |           |      |
+// | CTRL            |        |          | CTRL_C |  GUI_V       |             |          |     |      |     |     |           |      |
+//                                            |     |      |      |               |     |      |     |
+                        bindings = <
+   &trans                &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp LC(LS(R)) &kp LG(LS(T))          &trans          &trans &trans &trans &LG(LA(P)) &trans
+   &mo CTRL_SHFT_LAYER   &LC(A)      &trans        &trans        &trans        &trans                 &kp LG(LS(G))   &trans &trans &trans &trans     &trans
+   &kp LCTRL             &trans      &trans        &kp LC(C)     &kp LC(V)     &trans                 &trans          &trans &trans &trans &trans     &trans
                     	     &trans &trans   &trans               &trans   &trans    &trans
                         >;
                 };
