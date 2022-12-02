@@ -52,12 +52,12 @@
                 raise_layer {
                         label = "RAISE";
 // -----------------------------------------------------------------------------------------
-// |  GUI_TAB |  GUI_Q           |  GUI_W  |  #    |  ALT_ENT |  GUI_T     |   |  ^  |  GUI_U |  *  |     (      |  GUI_ALT_P  | BKSP |
+// |  GUI_TAB |  GUI_Q           |  GUI_W  |  #    |  ALT_ENT |  GUI_T     |   |  ^  |  GUI_U |  *  |     (      |  GUI_P  | BKSP |
 // |          |  GUI_SHFT_A      |  GUI_S  |       |  GUI_F   |  GUI_SFT_G |   |  -  |  =     |  [  |  GUI_ALT_L |      \      | "|"  |
 // | CTRL     |  GUI_CTRL_SHFT_4 |  GUI_X  | GUI_C |  GUI_V   |  GUI_ALT_B |   |  _  |  ENT   |  {  |     }      |      \     |  `   |
 //                            | GUI   |         | SPC     |   | ENT |      | ALT |
                         bindings = <
-   &kp  LG(TAB)   &kp LG(Q)          &kp LG(W) &kp HASH  &kp LA(RET) &kp LG(T)       &kp CARET &kp LG(U)  &kp KP_MULTIPLY &kp LPAR       &kp LG(LA(P)) &kp BSPC
+   &kp  LG(TAB)   &kp LG(Q)          &kp LG(W) &kp HASH  &kp LA(RET) &kp LG(T)       &kp CARET &kp LG(U)  &kp KP_MULTIPLY &kp LPAR       &kp LG(P) &kp BSPC
    &trans         &kp LG(LS(A))      &kp LG(S) &trans    &kp LG(F)   &kp LG(LS(G))   &kp MINUS &kp EQUAL  &kp LBKT        &kp LG(LA(L))  &kp BSLH      &kp PIPE
    &mo CTRL_LAYER &kp LG(LC(LS(N4))) &kp LG(X) &kp LG(C) &kp LG(V)   &kp LG(LA(B))   &kp UNDER &kp RET    &kp LBRC        &kp RBRC       &kp BSLH      &kp GRAVE
                     	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
@@ -82,14 +82,14 @@
                 ctrl_layer {
                         label = "CTRL_LAYER";
 // -----------------------------------------------------------------------------------------
-// |      | MUTE | VOL_DOWN | VOL_UP |  CTRL_R |  CMD_SHFT_T |   |     |      |     |     |     |      |
-// |      |      |          |        |         |  CMD_SHFT_G |   |     |      |     |     |     |      |
-// |    L |      |          | CTRL_C |  GUI_V  |             |   |     |      |     |     |     |      |
+// |      | MUTE | VOL_DOWN | VOL_UP |  CTRL_R |  CMD_SHFT_T |          |     |      |     |     | GUI_ALT_P |      |
+// |      |      |          |        |         |  CMD_SHFT_G |          |     |      |     |     |           |      |
+// |    L |      |          | CTRL_C |  GUI_V  |             |          |     |      |     |     |           |      |
 //                         |     |      |      |               |     |      |     |
                         bindings = <
-   &trans    &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp LC(R) &kp LG(LS(T))     &trans &trans &trans &trans &trans &trans
-   &trans    &trans    &trans    &trans    &trans    &trans    &kp LG(LS(G))     &trans &trans &trans &trans &trans
-   &kp LCTRL &trans    &trans    &kp LC(C) &kp LC(V) &trans    &trans            &trans &trans &trans &trans &trans
+   &trans    &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp LC(R) &kp LG(LS(T))          &trans          &trans &trans &trans &LG(LA(P)) &trans
+   &trans    &trans      &trans        &trans        &trans    &trans                 &kp LG(LS(G))   &trans &trans &trans &trans     &trans
+   &kp LCTRL &trans      &trans        &kp LC(C)     &kp LC(V) &trans                 &trans          &trans &trans &trans &trans     &trans
                     	     &trans &trans   &trans               &trans   &trans    &trans
                         >;
                 };
