@@ -82,12 +82,12 @@
                 ctrl_layer {
                         label = "CTRL_LAYER";
 // -----------------------------------------------------------------------------------------
-// |      | MUTE | VOL_DOWN | VOL_UP |  CTRL_R |         |   |     |      |     |     |     |      |
-// |      |      |          |        |         |         |   |     |      |     |     |     |      |
-// |    L |      |          | CTRL_C |  GUI_V  |         |   |     |      |     |     |     |      |
-//                   |     |      |      |               |     |      |     |
+// |      | MUTE | VOL_DOWN | VOL_UP |  CTRL_R |  CMD_SHFT_T |   |     |      |     |     |     |      |
+// |      |      |          |        |         |             |   |     |      |     |     |     |      |
+// |    L |      |          | CTRL_C |  GUI_V  |             |   |     |      |     |     |     |      |
+//                         |     |      |      |               |     |      |     |
                         bindings = <
-   &trans    &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp LC(R) &trans     &trans &trans &trans &trans &trans &trans
+   &trans    &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp LC(R) &kp LG(LS(T))     &trans &trans &trans &trans &trans &trans
    &trans    &trans    &trans    &trans    &trans    &trans               &trans &trans &trans &trans &trans &trans
    &kp LCTRL &trans    &trans    &kp LC(C) &kp LC(V) &trans               &trans &trans &trans &trans &trans &trans
                     	     &trans &trans   &trans               &trans   &trans    &trans
