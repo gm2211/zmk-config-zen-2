@@ -89,7 +89,7 @@
 //                      |     |      |      |               |     |      |     |
                         bindings = <
    &trans                &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp LC(R) &kp LG(LS(T))          &trans          &trans &trans &trans &kp LG(LA(P)) &trans
-   &mo CTRL_SHFT_LAYER   &LC(A)      &trans        &trans        &trans    &trans                 &kp LG(LS(G))   &trans &trans &trans &trans        &trans
+   &mo CTRL_SHFT_LAYER   &kp LC(A)   &trans        &trans        &trans    &trans                 &kp LG(LS(G))   &trans &trans &trans &trans        &trans
    &kp LCTRL             &trans      &trans        &kp LC(C)     &kp LC(V) &trans                 &trans          &trans &trans &trans &trans        &trans
                     	     &trans &trans   &trans               &trans   &trans    &trans
                         >;
