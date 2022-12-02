@@ -53,14 +53,14 @@
                 raise_layer {
                         label = "RAISE";
 // -----------------------------------------------------------------------------------------
-// |  GUI_TAB |  GUI_Q           |  GUI_W  |  #    |  ALT_ENT |  GUI_T     |   |  ^  |  GUI_U |  *  |   GUI_ALT_O |  GUI_P  | BKSP |
-// |          |  GUI_SHFT_A      |  GUI_S  |       |  GUI_F   |  GUI_SFT_G |   |  -  |  =     |  [  |  GUI_ALT_L  |      \  | "|"  |
-// | CTRL     |  GUI_CTRL_SHFT_4 |  GUI_X  | GUI_C |  GUI_V   |  GUI_ALT_B |   |  _  |  ENT   |  {  |     }       |      \  |  `   |
+// | GUI_TAB         |  GUI_Q           |  GUI_W  |  #    |  ALT_ENT |  GUI_T     |   |  ^  |  GUI_U |  *  |   GUI_ALT_O |  GUI_P  | BKSP |
+// | CTRL_SHFT_LAYER |  GUI_SHFT_A      |  GUI_S  |       |  GUI_F   |  GUI_SFT_G |   |  -  |  =     |  [  |  GUI_ALT_L  |      \  | "|"  |
+// |       CTRL      |  GUI_CTRL_SHFT_4 |  GUI_X  | GUI_C |  GUI_V   |  GUI_ALT_B |   |  _  |  ENT   |  {  |     }       |      \  |  `   |
 //                            | GUI   |         | SPC     |   | ENT |      | ALT |
                         bindings = <
-   &kp  LG(TAB)   &kp LG(Q)          &kp LG(W) &kp HASH  &kp LA(RET) &kp LG(T)       &kp CARET &kp LG(U)  &kp KP_MULTIPLY &kp LG(LA(O))  &kp LG(P) &kp BSPC
-   &trans         &kp LG(LS(A))      &kp LG(S) &trans    &kp LG(F)   &kp LG(LS(G))   &kp MINUS &kp EQUAL  &kp LBKT        &kp LG(LA(L))  &kp BSLH      &kp PIPE
-   &mo CTRL_LAYER &kp LG(LC(LS(N4))) &kp LG(X) &kp LG(C) &kp LG(V)   &kp LG(LA(B))   &kp UNDER &kp RET    &kp LBRC        &kp RBRC       &kp BSLH      &kp GRAVE
+   &kp  LG(TAB)         &kp LG(Q)          &kp LG(W) &kp HASH  &kp LA(RET) &kp LG(T)       &kp CARET &kp LG(U)  &kp KP_MULTIPLY &kp LG(LA(O))  &kp LG(P) &kp BSPC
+   &mo CTRL_SHFT_LAYER  &kp LG(LS(A))      &kp LG(S) &trans    &kp LG(F)   &kp LG(LS(G))   &kp MINUS &kp EQUAL  &kp LBKT        &kp LG(LA(L))  &kp BSLH      &kp PIPE
+   &mo CTRL_LAYER       &kp LG(LC(LS(N4))) &kp LG(X) &kp LG(C) &kp LG(V)   &kp LG(LA(B))   &kp UNDER &kp RET    &kp LBRC        &kp RBRC       &kp BSLH      &kp GRAVE
                     	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
