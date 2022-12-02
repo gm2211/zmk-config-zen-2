@@ -103,9 +103,9 @@
 // | CTRL            |        |          | CTRL_C |  GUI_V       |             |          |     |      |     |     |           |      |
 //                                            |     |      |      |               |     |      |     |
                         bindings = <
-   &trans                &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp LC(LS(R)) &kp LG(LS(T))          &trans          &trans &trans &trans &LG(LA(P)) &trans
-   &mo CTRL_SHFT_LAYER   &LC(A)      &trans        &trans        &trans        &trans                 &kp LG(LS(G))   &trans &trans &trans &trans     &trans
-   &kp LCTRL             &trans      &trans        &kp LC(C)     &kp LC(V)     &trans                 &trans          &trans &trans &trans &trans     &trans
+   &trans                &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp LC(LS(R)) &kp LG(LS(T))          &trans          &trans &trans &trans &kp LG(LA(P)) &trans
+   &mo CTRL_SHFT_LAYER   &kp LC(A)   &trans        &trans        &trans        &trans                 &kp LG(LS(G))   &trans &trans &trans &trans        &trans
+   &kp LCTRL             &trans      &trans        &kp LC(C)     &kp LC(V)     &trans                 &trans          &trans &trans &trans &trans        &trans
                     	     &trans &trans   &trans               &trans   &trans    &trans
                         >;
                 };
