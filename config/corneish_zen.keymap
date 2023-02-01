@@ -83,14 +83,14 @@
                 ctrl_layer {
                         label = "CTRL_LAYER";
 // -----------------------------------------------------------------------------------------
-// |                 | MUTE   | VOL_DOWN | VOL_UP |  CTRL_R |  CMD_SHFT_T |          |     |      |            |     | GUI_ALT_P |      |
+// |                 |        |          | CTRL_E |  CTRL_R |  CMD_SHFT_T |          |     |      |            |     | GUI_ALT_P |      |
 // | CTRL_SHFT_LAYER | CTRL_A |          |        |         |  CMD_SHFT_G |          |     |      |  CTRL_UP   |     |           |      |
-// | CTRL            |        |          | CTRL_C |  GUI_V  |             |          |     |      |            |     |           |      |
+// | CTRL            |        | CTRL_X   | CTRL_C |  GUI_V  |             |          |     |      |            |     |           |      |
 //                      |     |      |      |               |     |      |     |
                         bindings = <
-   &trans                &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp LC(R) &kp LG(LS(T))          &trans          &trans &trans     &trans &kp LG(LA(P)) &trans
-   &mo CTRL_SHFT_LAYER   &kp LC(A)   &trans        &trans        &trans    &trans                 &kp LG(LS(G))   &trans &kp LC(UP) &trans &trans        &trans
-   &kp LCTRL             &trans      &trans        &kp LC(C)     &kp LC(V) &trans                 &trans          &trans &trans     &trans &trans        &trans
+   &trans                &trans     &trans     &kp LC(E)  &kp LC(R) &kp LG(LS(T))          &trans          &trans &trans     &trans &kp LG(LA(P)) &trans
+   &mo CTRL_SHFT_LAYER   &kp LC(A)  &trans     &trans     &trans    &trans                 &kp LG(LS(G))   &trans &kp LC(UP) &trans &trans        &trans
+   &kp LCTRL             &trans     &kp LC(X)  &kp LC(C)  &kp LC(V) &trans                 &trans          &trans &trans     &trans &trans        &trans
                     	     &trans &trans   &trans               &trans   &trans    &trans
                         >;
                 };
