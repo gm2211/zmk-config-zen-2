@@ -55,12 +55,12 @@
 // -----------------------------------------------------------------------------------------
 // | GUI_TAB         |  GUI_Q        |  GUI_W  |  #    |  ALT_ENT |  GUI_T     |   |  ^  |  GUI_U |  *  |   GUI_ALT_O |  GUI_P  | BKSP |
 // | CTRL_SHFT_LAYER |  GUI_SHFT_A   |  GUI_S  |       |  GUI_F   |  GUI_SFT_G |   |  -  |  =     |  [  |  GUI_ALT_L  |      \  | "|"  |
-// |       CTRL      |  GUI_Z        |  GUI_X  | GUI_C |  GUI_V   |  GUI_ALT_B |   |  _  |  ENT   |  {  |     }       |      \  |  `   |
+// |                 |  GUI_Z        |  GUI_X  | GUI_C |  GUI_V   |  GUI_ALT_B |   |  _  |  ENT   |  {  |     }       |      \  |  `   |
 //                            | GUI   |         | SPC     |   | ENT |      | ALT |
                         bindings = <
    &kp  LG(TAB)         &kp LG(Q)      &kp LG(W) &kp HASH  &kp LA(RET) &kp LG(T)       &kp CARET &kp LG(U)  &kp KP_MULTIPLY &kp LG(LA(O))  &kp LG(P) &kp BSPC
    &mo CTRL_SHFT_LAYER  &kp LG(LS(A))  &kp LG(S) &trans    &kp LG(F)   &kp LG(LS(G))   &kp MINUS &kp EQUAL  &kp LBKT        &kp LG(LA(L))  &kp BSLH      &kp PIPE
-   &mo CTRL_LAYER       &kp LG(Z)      &kp LG(X) &kp LG(C) &kp LG(V)   &kp LG(LA(B))   &kp UNDER &kp RET    &kp LBRC        &kp RBRC       &kp BSLH      &kp GRAVE
+   &trans               &kp LG(Z)      &kp LG(X) &kp LG(C) &kp LG(V)   &kp LG(LA(B))   &kp UNDER &kp RET    &kp LBRC        &kp RBRC       &kp BSLH      &kp GRAVE
                     	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
@@ -68,14 +68,14 @@
 		symbols_layer {
 					label = "SYMBOLS";
 		// -----------------------------------------------------------------------------------------
-		// |  TAB |  !  |  @  |  {  |  }  |  |  |   |  /  |  7  |  8  |  9  |  &  |   \  |
-		// |      |  #  |  $  |  (  |  )  |  `  |   |  *  |  4  |  5  |  6  |  0  |   "  |
-		// |      |  %  |  ^  |  [  |  ]  |  ~  |   |  +  |  1  |  2  |  3  |  .  |      |
+		// |  TAB       |  !  |  @  |  {  |  }  |  |  |   |  /  |  7  |  8  |  9  |  &  |   \  |
+		// |            |  #  |  $  |  (  |  )  |  `  |   |  *  |  4  |  5  |  6  |  0  |   "  |
+		// | CTRL_LAYER |  %  |  ^  |  [  |  ]  |  ~  |   |  +  |  1  |  2  |  3  |  .  |      |
 		//                    | GUI |     | SPC |   |     |  _  |  -  |
 					bindings = <
-		   &kp TAB &kp EXCL  &kp AT    &kp LBRC &kp RBRC &kp PIPE           &kp FSLH        &kp N7   &kp N8   &kp N9 &kp AMPS &kp BSLH
-		   &trans  &kp HASH  &kp DLLR  &kp LPAR &kp RPAR &kp GRAVE          &kp KP_MULTIPLY &kp N4   &kp N5   &kp N6 &kp N0   &kp DQT
-		   &trans  &kp PRCNT &kp CARET &kp LBKT &kp RBKT &kp TILDE          &kp PLUS        &kp N1   &kp N2   &kp N3 &kp DOT  &trans
+		   &kp TAB         &kp EXCL  &kp AT    &kp LBRC &kp RBRC &kp PIPE           &kp FSLH        &kp N7   &kp N8   &kp N9 &kp AMPS &kp BSLH
+		   &trans          &kp HASH  &kp DLLR  &kp LPAR &kp RPAR &kp GRAVE          &kp KP_MULTIPLY &kp N4   &kp N5   &kp N6 &kp N0   &kp DQT
+		   &mo CTRL_LAYER  &kp PRCNT &kp CARET &kp LBKT &kp RBKT &kp TILDE          &kp PLUS        &kp N1   &kp N2   &kp N3 &kp DOT  &trans
 				               &kp LGUI     &trans       &kp SPACE               &kp RET  &kp MINUS &kp UNDER  
 					>;
 				};
@@ -84,13 +84,13 @@
                         label = "CTRL_LAYER";
 // -----------------------------------------------------------------------------------------
 // |                 |        |          | CTRL_E |  CTRL_R |  CMD_SHFT_T |          |     |      |            |     | GUI_ALT_P |      |
-// | CTRL_SHFT_LAYER | CTRL_A |          |        |         |  CMD_SHFT_G |          |     |      |  CTRL_UP   |     |           |      |
+// | CTRL_SHFT_LAYER | CTRL_A |          | CTRL_D |         |  CMD_SHFT_G |          |     |      |  CTRL_UP   |     |           |      |
 // | CTRL            |        | CTRL_X   | CTRL_C |  GUI_V  |             |          |     |      |            |     |           |      |
 //                      |     |      |      |               |     |      |     |
                         bindings = <
-   &trans                &trans     &trans     &kp LC(E)  &kp LC(R) &kp LG(LS(T))          &trans          &trans &trans     &trans &kp LG(LA(P)) &trans
-   &mo CTRL_SHFT_LAYER   &kp LC(A)  &trans     &trans     &trans    &trans                 &kp LG(LS(G))   &trans &kp LC(UP) &trans &trans        &trans
-   &kp LCTRL             &kp LG(LC(LS(N4)))    &kp LC(X)  &kp LC(C)  &kp LC(V) &trans                 &trans          &trans &trans     &trans &trans        &trans
+   &trans                &trans     &trans     &kp LC(E)  &kp LC(R)  &kp LG(LS(T))          &trans          &trans &trans     &trans &kp LG(LA(P)) &trans
+   &mo CTRL_SHFT_LAYER   &kp LC(A)  &trans     &trans     &kp LC(D)  &trans                 &kp LG(LS(G))   &trans &kp LC(UP) &trans &trans        &trans
+   &kp LCTRL             &kp LG(LC(LS(N4)))    &kp LC(X)  &kp LC(C)  &kp LC(V)              &trans          &trans          &trans &trans     &trans &trans        &trans
                     	     &trans &trans   &trans               &trans   &trans    &trans
                         >;
                 };
