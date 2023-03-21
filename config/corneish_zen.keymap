@@ -83,14 +83,14 @@
                 ctrl_layer {
                         label = "CTRL_LAYER";
 // -----------------------------------------------------------------------------------------
-// |       |        |          | CTRL_E |  CTRL_R |  CMD_SHFT_T |          |     |      |            |     | GUI_ALT_P |      |
-// |       | CTRL_A |          | CTRL_D |         |  CMD_SHFT_G |          |     |      |  CTRL_UP   |     |           |      |
-// | CTRL  |        | CTRL_X   | CTRL_C |  GUI_V  |             |          |     |      |            |     |           |      |
+// |       |        |          | CTRL_E |  CTRL_R |  CMD_SHFT_T |          |     |           |            |     | GUI_ALT_P |      |
+// |       | CTRL_A |          | CTRL_D |         |  CMD_SHFT_G |          |     | CTRL_DOWN |  CTRL_UP   |     |           |      |
+// | CTRL  |        | CTRL_X   | CTRL_C |  GUI_V  |             |          |     |           |            |     |           |      |
 //                      |     |      |      |               |     |      |     |
                         bindings = <
-   &trans     &trans                &trans     &kp LC(E)  &kp LC(R)  &kp LG(LS(T))          &trans          &trans &trans     &trans &kp LG(LA(P)) &trans
-   &trans     &kp LC(A)             &trans     &trans     &kp LC(D)  &trans                 &kp LG(LS(G))   &trans &kp LC(UP) &trans &trans        &trans
-   &kp LCTRL  &kp LG(LC(LS(N4)))    &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans                 &trans          &trans &trans     &trans &trans        &trans
+   &trans     &trans                &trans     &kp LC(E)  &kp LC(R)  &kp LG(LS(T))          &trans          &trans       &trans     &trans &kp LG(LA(P)) &trans
+   &trans     &kp LC(A)             &trans     &trans     &kp LC(D)  &trans                 &kp LG(LS(G))   &kp LC(DOWN) &kp LC(UP) &trans &trans        &trans
+   &kp LCTRL  &kp LG(LC(LS(N4)))    &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans                 &trans          &trans       &trans     &trans &trans        &trans
                     	     &trans &trans   &trans               &trans   &trans    &trans
                         >;
                 };
@@ -98,14 +98,14 @@
                 ctrl_shft_layer {
                         label = "CTRL_SHFT_LAYER";
 // -----------------------------------------------------------------------------------------
-// |                 | MUTE   | VOL_DOWN | VOL_UP |  CTRL_SHFT_R |  CMD_SHFT_T |          |       |       |       |     | GUI_ALT_P |      |
-// | CTRL_SHFT_LAYER | CTRL_A |          |        |              |  CMD_SHFT_G |          |       |       |       |     |           |      |
-// | CTRL            |        |          | CTRL_C |  GUI_V       |             |          | BTCLR |  BT1  |  BT2  | BT3 | BT4       | BT5 |
+// |                 | MUTE        | VOL_DOWN | VOL_UP      |  CTRL_SHFT_R |  CTRL_SHFT_T |          |       |       |       |     | GUI_ALT_P |      |
+// | CTRL_SHFT_LAYER | CTRL_SHFT_A |          |             |              |  CTRL_SHFT_G |          |       |       |       |     |           |      |
+// | CTRL            |             |          | CTRL_SHFT_C |  GUI_SHFT_V  |              |          | BTCLR |  BT1  |  BT2  | BT3 | BT4       | BT5 |
 //                                            |     |      |      |               |     |      |     |
                         bindings = <
-   &trans                &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp LC(LS(R)) &kp LG(LS(T))          &trans          &trans       &trans       &trans       &kp LG(LA(P)) &trans
-   &mo CTRL_SHFT_LAYER   &kp LC(A)   &trans        &trans        &trans        &trans                 &kp LG(LS(G))   &trans       &trans       &trans       &trans        &trans
-   &kp LCTRL             &trans      &trans        &kp LC(C)     &kp LC(V)     &trans                 &bt BT_CLR      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4
+   &trans                &kp C_MUTE      &kp C_VOL_DN  &kp C_VOL_UP  &kp LC(LS(R)) &kp LC(LS(T))      &trans          &trans       &trans       &trans       &kp LG(LA(P)) &trans
+   &mo CTRL_SHFT_LAYER   &kp LC(LS(A))   &trans        &trans        &trans        &trans             &kp LG(LS(G))   &trans       &trans       &trans       &trans        &trans
+   &kp LCTRL             &trans          &trans        &kp LC(LS(C)) &kp LC(LS(V)) &trans             &bt BT_CLR      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4
                     	     &trans &trans   &trans               &trans   &trans    &trans
                         >;
                 };
